@@ -15,6 +15,7 @@ fetch("https://jsonplaceholder.typicode.com/posts", {
   .then(function (info) {
     let fragment = document.createDocumentFragment();
 
+
     info.forEach((element) => {
       let h2 = document.createElement("h2");
       h2.innerText = `${element.id}`;
@@ -28,6 +29,7 @@ fetch("https://jsonplaceholder.typicode.com/posts", {
       titleDiv.appendChild(p);
       fragment.appendChild(titleDiv);
 
+      
       titleDiv.addEventListener("click", function () {
         fulinfo.classList.add("active");
         let postId = this.getAttribute("data-id");
